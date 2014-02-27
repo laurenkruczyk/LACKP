@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+           <title>Kickball Teams</title>
+    </head>
+
+    <body>
+            <h1>Kickball Teams</h1>
+      <table>
+         <th>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Position</td>
+            <td>Team</td>
+        </th>
+   <% @teams.each do |team| %>
+           <% if team["position"] == "Center Field" %>
+        <tr>
+             <td><%=  team["first_name"]%></td>
+             <td><%= team["last_name"]%></td>
+             <td><%= team["position"]%></td>
+             <td><%= team["team"]%></td>
+        </tr>
+        <% end %>
+         <% end %>
+      </table>
+    </body>
+  </html>
+
